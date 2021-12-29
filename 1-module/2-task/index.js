@@ -11,18 +11,16 @@ function print(text) {
  */
 function isValid(name) {
   // ваш код...
-  if (name == null) {
+
+
+  if (name == null || 
+    name.includes(" ") ||
+    name == "" ||
+    !(name.length >= 4)) {
     return false;
-  }
-  for (let i = 0; i < name.length; i++) {
-    if (name[i] == ' ') {
-      return false;
-    }
-  }
-  if (name != "" && name.length >= 4) {
-    return true; 
-  }
-  return false;
+  } 
+  
+  return true;
 }
 
 function sayHello() {
