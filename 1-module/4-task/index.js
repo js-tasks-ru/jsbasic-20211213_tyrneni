@@ -1,7 +1,12 @@
 function checkSpam(str) {
   // ваш код...
   str = str.toLowerCase();
-  let spamList = ['1xbet now', 'free xxxxx'];
+  let spamList = ['1xbet', 'xxx'];
 
-  return spamList.includes(str);
+  for (let spamItem of spamList) {
+    if (str.includes(spamItem)) {
+      return true;
+    }
+  }
+  return false;
 }
