@@ -18,6 +18,11 @@ export default class UserTable {
     this.render();
     this.labelButtons();
 
+    this.elem.addEventListener('row-delete', (event) => { 
+      let btn = event.detail;
+      btn.closest('tr').remove();
+    });
+
   }
 
   render() {

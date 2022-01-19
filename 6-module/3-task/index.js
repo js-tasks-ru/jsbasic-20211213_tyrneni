@@ -53,7 +53,7 @@ export default class Carousel {
   }
 
   onClick = (event) => {
-    console.log(event.target.closest('.carousel__slide').getAttribute('data-id'))
+    //console.log(event.target.closest('.carousel__slide').getAttribute('data-id'));
     this.elem.dispatchEvent(new CustomEvent("product-add", {
       detail: event.target.closest('.carousel__slide').getAttribute('data-id'),
       bubbles: true
