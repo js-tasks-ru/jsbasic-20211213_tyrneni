@@ -66,6 +66,12 @@
     let table = new UserTable(rows);
     document.body.append(table.elem);
 
+    
+    document.body.addEventListener('row-delete', (event) => { 
+      let btn = event.detail;
+      btn.closest('tr').remove();
+    });
+
   </script>
 </body>
 
