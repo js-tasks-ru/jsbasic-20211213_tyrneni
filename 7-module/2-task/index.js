@@ -48,8 +48,10 @@ export default class Modal {
   }
 
   close = (event) => {
-    document.querySelector('.is-modal-open').querySelector('.modal').remove();
-    document.querySelector('.is-modal-open').classList.remove('is-modal-open');
+    this.elem.remove();
+    document.body.classList.remove('is-modal-open');
+    /* document.querySelector('.is-modal-open').querySelector('.modal').remove();
+    document.querySelector('.is-modal-open').classList.remove('is-modal-open'); */
 
     document.removeEventListener('keydown', this.keyClose);
   }
