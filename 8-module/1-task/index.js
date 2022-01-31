@@ -39,7 +39,9 @@ export default class CartIcon {
   }
 
   updatePosition() {
-    // ваш код ...
+    if (!this.elem.offsetWidth) {
+      return;
+    }
     let initialTopCoord = this.elem.getBoundingClientRect().top - window.pageYOffset;
     //console.log(this.initialTopCoord, window.pageYOffset, window.pageYOffset > this.initialTopCoord)
 
