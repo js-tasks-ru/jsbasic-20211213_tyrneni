@@ -7,6 +7,8 @@ export default class Cart {
 
   addProduct(product) {
     // ваш код
+    if (!product) { return; }
+        
     let cartItem = this.cartItems.find(cart => (cart.product.id == product.id));
 
     if (cartItem) {
