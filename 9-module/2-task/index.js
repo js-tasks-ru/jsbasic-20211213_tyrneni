@@ -46,7 +46,7 @@ export default class Main {
       noNuts: document.getElementById('nuts-checkbox').checked,
       vegeterianOnly: document.getElementById('vegeterian-checkbox').checked,
       maxSpiciness: this.stepSlider.value,
-      //category: this.ribbonMenu.value //???
+      category: this.ribbonMenu.value //???
     });
 
     document.body.addEventListener("product-add", ({ detail: productCart }) => {
